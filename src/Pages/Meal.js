@@ -11,15 +11,17 @@ const MealC = () => {
 
   useEffect(() => {
     getMeal();
-  }, []);
+  }, [idMeal]);
 
   const getMeal = async () => {
     try {
       setLoad(true);
-      const result = await axios.getMeal(
+      const result = await axios.get(
         `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
       );
-      setMeal(result.data);
+      setMeal(result.data.meals[0]);
+      console.log(result.data.meals[0]);
+      // console.log(result);
       setLoad(false);
     } catch (error) {
       console.log(error);
@@ -27,16 +29,14 @@ const MealC = () => {
   };
   return (
     <div>
-      <h1>
-        {load ? (
-          <img
-            src="https://icon-library.com/images/loading-icon-transparent-background/loading-icon-transparent-background-12.jpg"
-            alt="spinner"
-          />
-        ) : (
-          <h1>{meal.strMeal}</h1>
-        )}
-      </h1>
+      {load ? (
+        <img
+          src="https://icon-library.com/images/loading-icon-transparent-background/loading-icon-transparent-background-12.jpg"
+          alt="spinner"
+        />
+      ) : (
+        <h1>{meal.strMeal}</h1>
+      )}
     </div>
   );
 };

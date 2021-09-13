@@ -1,6 +1,7 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 const Home = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  console.log(searchTerm);
   return (
     <div>
       <h1>Home page</h1>
