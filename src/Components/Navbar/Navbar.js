@@ -1,23 +1,30 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import "./Navbar.css";
+import icon from "./icon.png";
 
 const NavbarC = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Meals Page</Navbar.Brand>
+          <Navbar.Brand href="/" className="text-warning">
+            <img src={icon} width="40px" height="40px" alt="nav_icon" />
+            Happy Recipe
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Link to="/">Home</Link>
-              <Link to="/meals">Meals</Link>
-              <Link to="/about">About Us</Link>
-            </Nav>
+            <Nav className="me-auto"></Nav>
             <Nav>
-              <Link to="/admin">Admin</Link>
+              <Link className="nav_links" to="/">
+                Home
+              </Link>
+
+              <Link className="nav_links" to="/about">
+                About Us
+              </Link>
+              {/* <Link to="/admin">Admin</Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,4 +1,11 @@
-.card {
-  width: 500px;
-  height: 400px;
+.meals_card .button {
+  width: 300px;
+  background-color: burlywood;
+  border: 1px;
+}
+
+.meals_card h4 {
+  color: rgb(0, 0, 0);
+  text-decoration: underline orange;
+  margin-top: 40px;
 }

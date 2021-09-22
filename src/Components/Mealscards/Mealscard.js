@@ -5,19 +5,17 @@ import { Link } from "react-router-dom";
 
 const MealscardC = ({ meal }) => {
   return (
-    <div>
+    <div className="meals_card">
       <Link to={{ pathname: `/meals/meal/${meal.idMeal}`, state: meal }}>
-        <h1>{meal.strMeal}</h1>
-
-        <h2>{meal.strCategory}</h2>
-
-        <h3>{meal.strArea}</h3>
+        <h4>{meal.strMeal}</h4>
         <img
           src={meal.strMealThumb}
           alt="thumbs"
           width="300px"
           height="300px"
         />
+        <br></br>
+        <button className="button">Details</button>
       </Link>
     </div>
   );
