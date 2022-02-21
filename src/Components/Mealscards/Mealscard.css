@@ -1,5 +1,12 @@
+.meals_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .meals_card .button {
-  width: 300px;
+  width: 250px;
   background-color: burlywood;
   border: 1px;
 }

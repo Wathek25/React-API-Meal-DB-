@@ -21,10 +21,13 @@ const NavbarC = () => {
                 Home
               </Link>
 
+              <Link className="nav_links" to="/meals">
+                Meals
+              </Link>
+
               <Link className="nav_links" to="/about">
                 About Us
               </Link>
-              {/* <Link to="/admin">Admin</Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

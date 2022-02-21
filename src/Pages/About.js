@@ -7,13 +7,11 @@ const About = () => {
     <div className="about">
       <h1>About Us</h1>
       <div className="about_desc">
-        <img src={happylogo} className="about_img" />
+        <img src={happylogo} className="about_img" alt="aboutImg" />
         <p>
           Happy Recipe is a website that provides recipe recommendations
           personalized to the individual's tastes, semantic recipe search, we
-          have a large collection of many recipes to let you choose from. We
-          like to mention that the Happy Recipe app will be available soon for
-          both iOS and Android.
+          have a large collection of many recipes to let you choose from.
         </p>
       </div>
     </div>
